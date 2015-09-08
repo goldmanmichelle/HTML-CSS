@@ -1,0 +1,336 @@
+/* Michelle Goldman
+MIU 1302
+Project 4
+*/
+
+h1 {
+    text-shadow: 1px -1px 1px #ffffff;   
+    color: #000000;
+    font-family: hobo std;
+    font-size: 36px;
+    line-height: 1.2em;
+    letter-spacing: .10em;   
+}
+
+h2 {
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+h3 {
+    text-shadow: 1px -1px 1px #ffffff;   
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 96px;
+    font: bolder;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+p {
+    text-shadow: 1px -1px 1px #ffffff;   
+    color: #000000;
+    font-family: sans-serif;
+    
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+ 
+}
+
+#copierSection p {
+    color: red;
+    text-align: left;
+}
+
+
+
+#home #featureOne h1{
+    text-shadow: 1px -1px 1px #ffffff;   
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: right;
+    text-wrap: suppress;
+}
+
+
+}
+#headerImage {
+        border-radius: 4px 4px 4px 4px;
+        
+
+}
+#searchField {
+    text-shadow: .5px -1px .5px black;   
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: -4px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: left;
+    margin: 5px 20px 0px 20px;
+ 
+}
+
+#searchTypes a {
+    text-shadow: .4px -1px .5px #0099cc;   
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: -8px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: left;
+    margin: 1px 20px 0px 20px;
+
+ 
+}
+
+#search p {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+}
+
+#service p {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+}
+
+#about p {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+}
+
+#navBar {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #ffffff;
+    font-family:sans-serif;   
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+ 
+}
+
+.footer p {
+    color: #ffffff;
+    font-size: 10px;
+    text-shadow: none;
+}
+
+#about ul li {
+    text-align: left;
+}
+
+
+
+#deadend {
+    padding: 4px 50px 15px 69px;  
+}
+
+#author #authorImage {
+    padding: 4px 0px 15px 69px;
+    
+}
+
+#authorStmt p {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 8px;
+}
+
+#author p {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 8px;
+}
+
+
+#credits p {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 8px;
+
+}
+
+#credits h3 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px; 
+}
+
+#gold h3 {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px; 
+}
+
+#gold p {
+    text-align: left;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 8px;
+
+}
+
+#gold #goldImage {
+    padding: 4px 0px 15px 69px;
+    
+}
+
+#bronze h3 {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px; 
+}
+
+#bronze p {
+    text-align: left;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 8px;
+
+}
+
+#bronze #bronzeImage {
+    padding: 4px 0px 15px 69px;
+    
+}
+
+#github h3 {
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px; 
+}
+
+#github p {
+    text-align: left;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 8px;
+
+}
+#model {
+    color: #ffffff;
+    text-align: left;
+}
+
+#model p {
+    text-align: left;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+#model h3 {
+    text-align: left;
+    color: #ffffff;
+}
+
+#modelImages {
+    padding: 25px 35px 5px 35px;
+    color: #ffffff;
+}
+
+#model .footer p {  
+    color: #ffffff;
+}
+.pageTitle  {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+   
+}
+
+#select {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+   
+}
+
+
+#statusHeader p {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+    
+}
+
+#statusFeed p {
+    font-family: sans-serif;
+    font-size: 10px;
+    color: black;
+    text-shadow: none;
+}
+
+#imageGrid {
+    text-align: center;
+    font-size: 12px;
+}
+
+#model p {
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #0099cc;
+    font-family: sans-serif;   
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center; 
+}
+
+
+
+a:link{color:#6895dc; }
+a:visited{color: #A8A8A8;}
+a:hover{color: #86c0ff;}
+a:active{color: blue;}

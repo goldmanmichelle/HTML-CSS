@@ -1,0 +1,1202 @@
+
+<!--Michelle Goldman-->
+<!--MIU 1302-->
+<!--Project 4 Gold App-->
+
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>MiCOPY </title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="themes/z.min.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	
+<!--Home Page-->
+
+        <div data-role="page" data-theme="a" id="home" >
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                 
+		
+                <div data-role="content" data-theme="">			  
+			<div id="featureOne" data-theme="">
+			<a href="#addCopier" data-ajax="false"><img id="feature" img src="img/copier.png" width="150" height="100" ><img id="feature" img src="img/addnow.png" width="140" height="100" ></a>
+		
+			</div>
+                
+			<!--Search Field-->
+			<div data-role="fieldcontain" id="searchField" >
+			<label for="search-mini">Search Copiers</label>
+			<input type="search" name="search-mini" id="search-mini" data-theme="" placeholder="Search current copiers" value="" data-mini="true" />
+			</div>
+		
+		
+				
+		
+			<!--Search Button Group-->
+			<div data-role="fieldcontain" id="browse" >
+				<ul data-role="listview" data-filter="false" data-inset="true" data-theme="a">
+					<li data-role="list-divider" data-theme="a">Browse Current Copiers by...</li>
+					<li>
+					<div data-role="controlgroup" id="searchTypes" data-theme="a" >
+						<a href="#location" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Location</a>
+						<a href="#model" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Model#</a>
+						<a href="#assetID" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Asset ID</a>
+						<a href="#led" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Lease End Date</a>
+					</div>	
+					</li>
+					
+				</ul>
+	
+			</div>
+		</div>
+		
+                <!--Footer-->
+                <div data-role="footer" data-position="fixed" data-theme="a">
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                    
+                </div>
+        </div>
+
+<!--Add Copier Form-->
+
+	<div data-role="page" id="addCopier" data-add-back-btn="true" data-theme="a" >
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		<div data-role="content" >
+			
+			<form action=" "  id="addNewCopierForm" >
+				
+				<!--Copier Location-->
+				<div data-role="fieldcontain" id="location" data-theme="a" >
+					<label for="copierLocation">Copier Location</label>
+					<select name="copierLocation" id="copierLocation" data-native-menu="false">
+						<option data-placeholder="true">Please Select A Location</option>
+						<optgroup label="Satellite Offices">
+							<option value="main">Main</option>
+							<option value="main">Miami</option>
+							<option value="main">Orlando</option>
+							<option value="main">South Carolina</option>
+						</optgroup>
+						
+						<optgroup label="Job Sites" >
+							<option value="main">Circle Bayshore</option>
+							<option value="main">FIU</option>
+							<option value="main">Flagler Village</option>
+							<option value="main">Harbourside</option>
+							<option value="main">NSU</option>
+							<option value="main">Orion Jet Center</option>
+							<option value="main">PBC Jails</option>
+							<option value="main">Port Everglades</option>
+							<option value="main">Sunpower ASU</option>
+							<option value="main">Sunpower Dolphin</option>
+						</optgroup>
+					</select>
+				</div>
+				
+				<!--Copier Model#-->
+				<div data-role="fieldcontain" id="model">
+					<fieldset data-role="controlgroup"  >
+						<legend>Copier Model#</legend>
+					        <input type="radio" value="MX2600N" name="model" id="MX2600N" data-theme="a" class="required" />
+						<label for="MX2600N">MX2600N</label>
+						<input type="radio" value="MX3110N" name="model" id="MX3110N"  />
+						<label for="MX3110N">MX3110N</label>
+						<input type="radio" value="MX503N" name="model" id="MX503N" data-theme="a" />
+						<label for="MX503N">MX503N</label>
+						<input type="radio" value="MX5110N" name="model" id="MX5110N"  />
+						<label for="MX5110N">MX5110N</label>
+						<input type="radio" value="MX5500N" name="model" id="MX5500N" data-theme="a" />
+						<label for="MX5500N">MX5500N</label>
+					</fieldset>
+				</div>
+				
+				<!--Copier Quantity-->
+				<div data-role="fieldcontain">
+					<label for="quantity">Quantity</label>
+					<input type="range" name="quantity" id="quantity"  value="1" min="1" max="10"/>
+				</div>
+				
+				<!--Copier Asset ID-->	
+				<div data-role="fieldcontain" id="asset" >
+					<label for="asset" class="required"> Asset ID </label>
+					
+					<input type="text" name="asset" id="asset" value=" A87WE9000M " class="required"></textarea>
+					<small><p>Located on a sticker on the front of the copier.</p></small>
+				</div>
+
+				
+				<!--Copier Ownership-->
+				<div data-role="fieldcontain" id="ownership">
+					<fieldset data-role="controlgroup" data-type="horizontal" >
+						<legend>Copier Ownership </legend> 
+						<small><p>Only Choose 1</p></small>
+					        <input type="checkbox" value="MX2600N" name="ownership" id="own" class="custom" data-theme="a" />
+						<label for="own">Owned</label>
+						<input type="checkbox" value="MX3110N" name="ownership" id="lease" class="custom" data-theme="a" />
+						<label for="lease">Leased</label>
+						<input type="checkbox" value="MX503N" name="ownership" id="rent" class="custom" data-theme="a" />
+						<label for="rent">Rented</label>
+					</fieldset>
+					
+				</div>
+				
+				
+				<div data-role="fieldcontain" id="led">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-theme="a" >
+						<legend>Lease End Date</legend> 
+							<label for="select-choice-min">Month</label>
+							<select name="select-choice-min" id="select-choice-min" data-mini="true" class="required" data-theme="a">
+								<option>Month</option>
+								<option value="jan">January</option>
+								<option value="feb">February</option>
+								<option value="mar">March</option>
+								<option value="apr">April</option>
+								<option value="may">May</option>
+								<option value="jun">June</option>
+								<option value="jul">July</option>
+								<option value="aug">August</option>
+								<option value="sep">September</option>
+								<option value="oct">October</option>
+								<option value="nov">November</option>
+								<option value="dec">December</option>					
+								<!-- etc. -->
+							</select>
+						    
+							<label for="select-choice-min">Day</label>
+							<select name="select-choice-min" id="select-choice-min" data-mini="true" data-theme="a">
+								<option>Day</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>				
+								<!-- etc. -->
+							</select>
+						    
+							<label for="select-choice-min">Year</label>
+							<select name="select-choice-min" id="select-choice-min" data-mini="true" data-theme="a">
+								<option>Year</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<!-- etc. -->
+							</select>
+						    
+					</fieldset>
+				</div>
+				
+				
+				<!--Copier Status-->
+				<div data-role="fieldcontain" id="copierStatus">
+					<label for="copierStatus">Copier Status</label>
+	
+					<select data-role="slider">
+						<option value="active">Active</option>
+						<option value="inactive">Storage</option>
+					</select>
+					<small><p>Is this copier actively being used at a location?</p></small>
+
+
+				</div>
+				
+				
+				<div data-role="fieldcontain" id="notes">
+					<label for="notes">Notes</label>
+					<textarea>Enter beneficial information regarding the location, ownership or use of copier. This space will adjust as you need more room. Don't be shy. Add as much information as you would like.
+					</textarea>
+				</div>
+				
+				<div data-role="fieldcontain" id="inputButtons">	
+					<input type="submit" value="Add Copier" data-theme="e" id="add"/><br/>
+					<input type="reset" value="Clear" />
+				</div>
+				
+				
+			</form>
+		</div>
+	</div>
+
+
+<!--Add Copier Form Error Page-->
+
+	<div data-role="dialog" id="addCopierError" data-theme="">
+		<div data-role="header"  data-position="fixed">
+			<h1>Oops! Try Again.</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul>
+				<li>Please enter all required information.</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+
+<!--Site Search Page-->
+
+	<div data-role="page" id="site" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" class="pageTitle" data-theme="">
+			<h2>COPIERS BY SITE</h2>
+		    
+			<ul data-role="listview" data-filter="false" data-inset="true" data-theme="a">
+				<li data-role="list-divider" data-theme="a">Satellite Offices</li>
+				<li>
+				<div data-role="controlgroup" id="searchTypes" data-theme="a" >
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Main</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Miami</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Orlando</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">South Carolina</a>
+				</div>	
+				</li>
+				
+				<li data-role="list-divider" data-theme="a">Job Sites</li>
+				<li>
+					<div data-role="controlgroup" id="searchTypes" >
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Circle Bayshore</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">FIU</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Flagler Village</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Harbourside</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">NSU</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Orion Jet Center</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">PBC Jails</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Port Everglades</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Sunpower ASU</a>
+						<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Sunpower Dolphin</a>
+	
+					</div>
+				</li>
+			</ul>
+                    
+                </div>
+                
+                <!--Nav Buttons at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+			
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+ 
+		
+
+<!--Location Search Page-->
+
+	<div data-role="page" id="location" data-add-back-btn="true" data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+                    <h2>COPIERS BY LOCATION</h2>
+		    
+		<ul data-role="listview" data-filter="false" data-inset="true" data-theme="a">
+			
+			<li data-role="list-divider" data-theme="a">Locations</li>
+			<li>
+				<div data-role="controlgroup" id="searchTypes" >
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Circle Bayshore</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">FIU</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Flagler Village</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Harbourside</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">NSU</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Orion Jet Center</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">PBC Jails</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Port Everglades</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Sunpower ASU</a>
+					<a href="#errorPage" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Sunpower Dolphin</a>
+
+				</div>
+			</li>
+		</ul>
+                    
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+
+<!--Model# Search Page-->
+
+	<div data-role="page" id="model" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" id="modelImages" >
+			<h2>COPIERS BY MODEL#</h2><br/>
+
+			<div class="content-primary">
+			<ul data-role="listview" data-theme="a">
+				
+				<li data-role="list-divider" data-theme="a">Model #</li>
+				<li><a href="#mx2600n">
+				<img src="img/MX2600N.png" width="150" height="150" alt="MX2600N" class="ui-li-image">
+				<h3>SHARP</h3>
+				<h4>MX2600N</h4>
+				<h4>26 PPM Color Copier</h4></a>
+				</li>
+						
+				<li><a href="#mx3110n">
+				<img src="img/MX3110N.png" width="100" height="100" alt="MX3110N" class="ui-li-image">
+				<h3>SHARP</h3>
+				<h4>MX3110N</h4>
+				<h4>31 PPM Color Copier</h4></a>
+				</li>
+						
+				<li><a href="#mx503n">
+				<img src="img/MX503N.png" width="100" height="100" alt="MX503N" class="ui-li-image">
+				<h3>SHARP</h3>	
+				<h4>MX503N</h4>
+				<h4>50 PPM B & W Copier</h4></a>
+				</li>
+						
+				<li><a href="#mx5110n">
+				<img src="img/MX5110N.png" width="100" height="100" alt="MX5110N" class="ui-li-image">
+				<h3>SHARP</h3>	
+				<h4>MX5110N</h4>
+				<h4>51 PPM Color Copier</h4></a>
+				</li>
+						
+				<li><a href="#mx5500n">
+				<img src="img/MX5500N.png" width="100" height="100" alt="MX5500N" class="ui-li-image">
+				<h3>SHARP</h3>	
+				<h4>MX5500N</h4>
+				<h4>55 PPM Color Copier</h4></a>
+				</li>	
+									
+			</ul>
+			</div>
+		</ul>
+		</div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.  </p></small>
+                </div>
+        </div>
+
+	<!--MX2600N Page-->
+	<div data-role="page" class="copierDetails" id="mx2600n" data-add-back-btn="true" data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+			<h2>SHARP MX2600N COPIER DETAILS</h2>
+		    
+			<img src="img/mx2600Features.png" width="280" height="280" alt="MX2600N" class="ui-li-image"></a>
+		             
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+	
+	<!--MX3110N Page-->
+	<div data-role="page" class="copierDetails" id="mx3110n" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+			<h2>SHARP MX3110N COPIER DETAILS</h2>
+		    
+			<img src="img/mx3110Features.png" width="280" height="280" alt="MX3110N" class="ui-li-image"></a>
+
+		    
+		
+                    
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+	
+	<!--MX503N Page-->
+	<div data-role="page" class="copierDetails" id="mx503n" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+			<h2>SHARP MX503N COPIER DETAILS</h2>
+			<img src="img/mx503Features.png" width="280" height="280" alt="MX503N" class="ui-li-image"></a>
+
+		
+                    
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+	
+	<!--MX5110N Page-->
+	<div data-role="page" class="copierDetails" id="mx5110n" data-add-back-btn="true" data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+			<h2>SHARP MX5110N COPIER DETAILS</h2>
+			<img src="img/mx5110Features.png" width="280" height="280" alt="MX5110N" class="ui-li-image"></a>
+
+		
+                    
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+	
+	<!--MX5500N Page-->
+	<div data-role="page" class="copierDetails" id="mx5500n" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+			<h2>SHARP MX5500N COPIER DETAILS</h2>
+			<img src="img/mx5500Features.png" width="280" height="280" alt="MX2600N" class="ui-li-image"></a>
+
+		
+                    
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+	        <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY. </p></small>
+                </div>
+        </div>
+	
+	
+	
+<!--Asset ID Search Page-->
+
+	<div data-role="page" class="copierDetails" id="assetID" data-add-back-btn="true" data-theme="a">
+            
+		<div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content">
+                    <h2>COPIERS BY ASSET ID</h2>
+		</div>
+		
+		
+		<div data-role="content">	
+			<div class="content=primary">
+				<ul data-role="listview" data-filter="true" data-inset="true" data-theme="a" >
+					<li data-role="list-divider" data-theme="a">Asset ID</li>
+					<li><a href="#errorPage">008I765</a></li>
+					<li><a href="#errorPage">098HU342</a></li>
+					<li><a href="#errorPage">12WE8U9</a></li>
+					<li><a href="#errorPage">12WE8U9</a></li>
+					<li><a href="#errorPage">1789288M</a></li>
+					<li><a href="#errorPage">222ER34</a></li>
+					<li><a href="#errorPage">23E4R76</a></li>
+					<li><a href="#errorPage">7765463</a></li>
+					<li><a href="#errorPage">7899876</a></li>
+					<li><a href="#errorPage">789WDF88</a></li>
+					<li><a href="#errorPage">8JJ56Y</a></li>
+					<li><a href="#errorPage">8UY7J65</a></li>
+					<li><a href="#errorPage">900876G</a></li>
+					<li><a href="#errorPage">90UIO789</a></li>
+					<li><a href="#errorPage">99000012</a></li>
+					<li><a href="#errorPage">A43G543</a></li>
+					<li><a href="#errorPage">LK987BN</a></li>
+					<li><a href="#errorPage">TT1200YU</a></li>
+					<li><a href="#errorPage">WWW987U6</a></li>
+				</ul>
+			</div>   
+                </div>
+                
+		<!--Nav Buttons at Bottom of Page-->
+                <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.  </p></small>
+                </div>
+        </div>
+
+<!--Lease End Date Search Page-->
+
+	<div data-role="page" id="led" data-add-back-btn="true" data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" data-theme="">
+			<h2>COPIERS BY LEASE END DATE</h2>
+		    
+			<ul data-role="listview" data-filter="false" data-inset="true" data-theme="a">
+				<li data-role="list-divider" data-theme="a">Lease End Date</li>
+				<li>
+				<div data-role="fieldcontain" data-inset="true" >
+					<fieldset data-role="controlgroup" data-type="horizontal" data-theme="a" >
+					
+					    <label for="select-choice-min">Month</label>
+					    <select name="select-choice-min" id="select-choice-min" data-mini="true" data-theme="a">
+						<option>Month</option>
+						<option value="jan">January</option>
+						<option value="feb">February</option>
+						<option value="mar">March</option>
+						<option value="apr">April</option>
+						<option value="may">May</option>
+						<option value="jun">June</option>
+						<option value="jul">July</option>
+						<option value="aug">August</option>
+						<option value="sep">September</option>
+						<option value="oct">October</option>
+						<option value="nov">November</option>
+						<option value="dec">December</option>					
+						<!-- etc. -->
+					    </select>
+					
+					    <label for="select-choice-min">Day</label>
+					    <select name="select-choice-min" id="select-choice-min" data-mini="true" data-theme="a">
+						<option>Day</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>				
+						<!-- etc. -->
+					    </select>
+					
+					    <label for="select-choice-min">Year</label>
+					    <select name="select-choice-min" id="select-choice-min" data-mini="true" data-theme="a">
+						<option>Year</option>
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+						<!-- etc. -->
+					    </select>
+					    
+					</fieldset>
+				</div>
+				</li>
+			</ul>
+                    
+                </div>
+                
+		
+		<!--Nav Buttons at Bottom of Page-->
+	
+                <div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+        </div>
+
+
+<!--Footer Buttons-->
+
+<!--About Button-->
+	<div data-role="page" id="about" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" data-theme="">
+			<h2>ABOUT MiCOPY</h2>
+			
+		<ul data-role="listview" data-filter="false" data-inset="true" data-theme="a">
+		<li data-role="list-divider" data-theme="a" id="aboutMC">Behind the Scenes Look at MiCOPY</li>	
+			<li>
+				<div data-role="controlgroup" id="searchTypes" >
+					<a href="#author" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">About the Author</a>
+					<a href="#credits" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Credits</a>
+					<a href="#gold" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Gold App</a>
+					<a href="#bronze" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Bronze App</a>
+					<a href="#github" data-role="button" data-iconpos="right" data-icon="arrow-r" data-theme="a">Github Repository</a>
+
+				</div>
+			</li>
+		</ul>
+
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+			
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+
+	</div>
+	
+	<!--Author Section-->
+	<div data-role="page" id="author" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		
+                <div data-role="content" data-theme="">
+			<h2>ABOUT THE AUTHOR</h2>
+
+			<img id="authorImage" img src="img/MGoldman.png" width="150" height="150" ></a>
+
+			
+			<div id="authorStmt"><span><p>     Michelle Goldman is originally from the mid-west but has resided in Florida
+			since 1981. After completing high school in Key West, FL she spent the next several
+			decades rasing her five children while exercising her skills in technology, training,
+			education and computer programming.</p>
+				<p>Realizing the growth potential in the mobile industry, Michelle decided to
+			further her education and pursue her Bachelor's degree at Full Sail University. Although
+			it has only been six months, she already has strong roots with several commercial industries
+			to develop mobile applications utilizing those relationships to deploy and test her
+			applications in real world environments.</p>
+				<p>There are many avenues that computer programming for mobile development can lead to.
+			For Michelle Goldman, she believes in the highest of standards and integrity and is
+			constantly looking to provide more efficient solutions to the individuals, organizations and
+			industries as a whole to increase productivity and profitability.</p></span></div>
+			
+			
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+
+	</div>
+	
+	<!--Credits Section-->
+	<div data-role="page" id="credits" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		
+                <div data-role="content" data-theme="">
+			<h2>CREDITS</h2>
+			<h3>I would like to express my sincere gratitude to the following.</h3>
+			
+			<p>My Family - especially my children!</p>
+			<p>My Full Sail Instructors - all of them!</p>
+			<p>My Fellow Sailors - we rocked this boat!</p>			
+			<p>Sharp Copiers for use of their copier images.</p>
+			<p>Lo*Cal Music for their Dead End logo.</p>
+			<p>Getty Images for the use of gold and bronze medal images.</p>
+			
+
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+	</div>
+	
+	<!--Gold App Section-->
+	<div data-role="page" id="gold" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		
+                <div data-role="content" data-theme="">
+			<h2>GOLD APPLICATION</h2>
+			<h3>Listed is the link for my Gold Application I created for MIU 1302
+			during project week 2. It provides examples for the One Window Drill
+			Down pattern, as well as the List Inlay and Newsstream.</h3>
+			
+			<img id="goldImage" img src="img/goldMedal.png" width="150" height="150" ></a>
+
+			
+			<small><p>https://github.com/michellegoldman/MIU-Goldman_Michelle_project2/tree/master/Gold</p></small>
+			
+
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+	</div>
+	
+	<!--Bronze App Section-->
+	<div data-role="page" id="bronze" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		
+                <div data-role="content" data-theme="">
+			<h2>BRONZE APPLICATION</h2>
+			<h3>Listed is the link for my Bronze Application I created for MIU 1302
+			during project week 2. It provides examples for the One Window Drill
+			Down pattern, as well as the List Inlay and Newsstream.</h3>
+			
+			<img id="bronzeImage" img src="img/bronzeMedal.png" width="150" height="150" ></a>
+
+			
+			<small><p>https://github.com/michellegoldman/MIU-Goldman_Michelle_project2/tree/master/Bronze</p></small>
+			
+
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.  </p></small>
+                </div>
+	</div>
+	
+	<!--Github Repo Section-->
+	<div data-role="page" id="github" data-add-back-btn="true" data-theme="a" class="aboutMicopy">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+		
+		
+                <div data-role="content" data-theme="">
+			<h2>GITHUB REPOSITORY</h2>
+			<h3>Listed is the link for my Github Repository I created for MIU 1302.
+			It houses both of my applications - Gold & Bronze.</h3>
+			
+			<p>https://github.com/michellegoldman/MIU-Goldman_Michelle_project2</p>
+			
+
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+	</div>
+		
+<!--Search Button-->
+	<div data-role="page" id="search" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" data-theme="">
+			<h2>SEARCH MiCOPY</h2>
+			<ul data-role="listview" data-filter="true" data-inset="true" data-theme="d">
+				<p>Search through the database by copier model,</p>
+				<p> site location, asset ID or lease end date.</p>
+			</ul>
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#about">About</a></li>
+
+
+				</ul>	
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+                </div>
+
+	</div>
+		
+<!--Service Button-->
+	<div data-role="page" id="service" data-add-back-btn="true" data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" data-theme="">
+			<h2>SERVICE, REPAIRS & PARTS</h2>		
+			<ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
+			<p>   Submit a request for service, repairs  </p>
+		        <p>or parts or search for an existing request.</p>					
+				
+		</div>
+
+				<!--Nav Bar at Bottom of Page-->
+				<div data-role="footer" data-position="fixed" data-theme="a">
+					<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#status">Status</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#addCopier">Add Copier</a></li>
+
+
+
+					</ul>	
+					</div>
+				    <small><p>Copyright &#169 2013  MiCOPY.   </p></small>
+				</div>
+			
+	</div>
+	
+<!--Status Button-->
+	<div data-role="page" id="status" data-add-back-btn="true" data-theme="a">
+            
+                <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" id="statusHeader" data-theme="a">
+			<h2>REQUEST STATUS</h2>		
+			<p>Check the status of an existing service,
+			repair or parts request by model#, asset
+			ID, or location.</p>
+				
+		</div>
+		
+		<div data-role="content">	
+			<div class="content=primary">
+				<ul data-role="listview" id="statusFeed" data-divider-theme="a" data-theme="c" >
+					<li data-role="list-divider">Friday, February 15, 2013 @ 2:00PM EST</li>
+					<li>
+						<h3>Service Call: Repair</h3>
+						<p><strong>Harbourside job site copier printing copies with lines.</strong></p>
+						<p>Service call placed 2/14/13 via email.</p>
+						<p class="ui-li-aside"><strong>2:00</strong>PM</p>
+					</li>
+					
+					<li data-role="list-divider">Tuesday, February 19, 2013 @ 10:00AM EST</li>
+					<li>
+						<h3>Service Call: Maintenance</h3>
+						<p><strong>Main Office marketing copier - routine.</strong></p>
+						<p>Service call placed 2/15/13 via website.</p>
+						<p class="ui-li-aside"><strong>10:00</strong>AM</p>
+					</li>
+										
+					<li data-role="list-divider">Wednesday, February 20, 2013 @ 1:00PM EST</li>
+					<li>
+						<h3>Parts Request: Toner</h3>
+						<p><strong>Main Office Pre-Con copier - all colors & waste toner.</strong></p>
+						<p>Order call placed 2/18/13 via email.</p>
+						<p class="ui-li-aside"><strong>1:00</strong>PM</p>
+					</li>
+					
+					<li data-role="list-divider">Thursday, February 21, 2013 btwn 11:00AM - 4:00PMEST</li>
+					<li>
+						<h3>Pickup: Copier</h3>
+						<p><strong>Port Everglades job site copier being returned to GE Capital.</strong></p>
+						<p>Request  placed 2/15/13 via email.</p>
+						<p class="ui-li-aside"><strong>11:00</strong>AM</p>
+					</li>
+					
+					<li data-role="list-divider">Friday, February 22, 2013 @ 3:00PM EST</li>
+					<li>
+						<h3>Service Call: Repair</h3>
+						<p><strong>Circle Bayshore job site copier feeder tray not working.</strong></p>
+						<p>Service call placed 2/21/13 via email.</p>
+						<p class="ui-li-aside"><strong>3:00</strong>PM</p>
+					</li>
+					
+				</ul>
+			</div>   
+                </div>
+
+				<!--Nav Bar at Bottom of Page-->
+				<div data-role="footer" data-position="fixed" data-theme="a" class="footer">
+					<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#search">Search</a></li>
+							<li><a href="#service">Service</a></li>
+
+		
+						</ul>
+					</div>
+				    <small><p>Copyright &#169 2013  MiCOPY.  All rights reserved. </p></small>
+				</div>
+			
+	</div>
+	
+<!--404 Error Page-->
+	<div data-role="page" id="errorPage"  data-theme="a">
+            
+               <div data-role="header" id="headerImage" data-position="fixed" data-theme="a">
+			<h1>MiCOPY</h1>	<a href="#home" data-role="none"><img id="logo" img src="img/logo5.png" ></a>	    
+                </div>
+                
+                <div data-role="content" data-theme="">
+			<h2>404 ERROR PAGE</h2>
+			<ul data-role="listview" data-filter="false" data-inset="true" data-theme="c">
+				<p>Uh-oh. It looks like we're at a dead end.</p>
+				<p>Don't fret ! A wire may have come loose.</p>
+				<p>Give me a moment while I patch it up.</p>
+				
+				<img id="deadend" img src="img/deadend.png" width="150" height="150" ></a>
+
+				<p>In the mean time, tap the HOME button</p>
+				<p>or ABOUT button to continue browsing.</p>
+				     <p>There's no place like home.</p>
+				
+			</ul>
+		</div>
+		<!--Nav Bar at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a" class="footer">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#service">Service</a></li>
+					<li><a href="#status">Status</a></li>
+
+
+				</ul>
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.  All rights reserved. </p></small>
+                </div>
+
+	</div>	
+
+
+
+				
+	
+		<!--Nav Buttons at Bottom of Page-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar" id="navBar" data-role="navbar" data-iconpos="bottom" data-theme="a">
+				
+			</div>
+                    <small><p>Copyright &#169 2013  MiCOPY.  </p></small>
+                </div>
+        </div>
+		
+		
+	
+	
+
+
+	
+	
+		
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>	
+        <script src="js/libs/jquery.validate.min.js" type="text/javascript"></script> 
+	<script src="js/json.js" type="text/javascript"></script>            
+        <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

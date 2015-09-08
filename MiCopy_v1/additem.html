@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <!--Michelle Goldman -->
+    <!--MIU 1302-->
+    <!--Project 4-->
+    
+    
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="My First App" />
+        <meta name="keywords" content="copier, copiers, asset, assets, asset management, Sharp, Canon, HP, Konica Minolta, Toshiba" />
+        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="user-scalabe=no, width=device-width" />
+        <title>MiCOPY</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>   
+        <div id="secondDiv">
+                <hgroup>
+                    <h1>MiCOPY &reg;</h1>
+                    <h2>Collect.     Store.     Maintain.</h2>
+                    <nav id="addItemNav">
+                        <li type="button" id="homePage"><a href="index.html" type="button" value="homePage"><span>Home</span></a></li>
+                        <li type="button" id="addCopier"><a href="additem.html"  style="display: inline;" value="addCopier"><span>Add Copier</span></a></li>
+                        <li type="button" id="showData"><a href="#" type="button" value="showData" /><span>Show Data</span></a></li>
+                        <li type="button" id="removeData"><a href="#" type="button" value="removeData"><span>Remove Stored Data</span></a></li>                                           
+                        <li type="button" id="searchPage"><a href="#" type="button" value="search" style="display: inline;"><span>Search</span></a></li>                                           
+                    </nav>                   
+                </hgroup>
+            </div>           
+            <form action="#" method="post" id="copierForm" />
+                <fieldset>
+                    <legend id="copierSection">Add Copier</legend>
+                    <small><p>* Fields are required!</p></small> 
+                        <div id="errors" ></div>                        
+                            <ul>
+                            <li id="sites"><label name="Location" for="Location"> Copier Location</label></li>
+                            <li><label for="copierModel"> Copier Model#</label>
+                                <ul>
+                                <div style="text-align: center;">
+                                    <label class="model">
+                                    <input type="radio" value="MX2600N" id="MX2600N" name="model" />
+                                    <span class="outer"><span class="inner"></span></span>
+                                    MX2600N
+                                    </label>
+                                    <label class="model">
+                                        <input type="radio" value="MX3110N" id="MX3110N" name="model" />
+                                        <span class="outer"><span class="inner"></span></span>
+                                        MX3110N
+                                    </label>                                      
+                                    <label class="model">
+                                        <input type="radio" value="MX503N"  id="MX503N" name="model" />
+                                        <span class="outer"><span class="inner"></span></span>
+                                        MX503N
+                                    </label>
+                                    <label class="model">
+                                        <input type="radio" value="MX5100N"  id="MX5100N" name="model" />
+                                        <span class="outer"><span class="inner"></span></span>
+                                        MX5100N
+                                    </label>
+                                    <label class="model">
+                                        <input type="radio" value="MX5500N"  id="MX5500N" name="model" />
+                                        <span class="outer"><span class="inner"></span></span>
+                                        MX5500N
+                                    </label>  
+                                </div>                                                       
+                                </ul>
+                            </li>
+                            </ul>
+                        <ul>
+                            <li>
+                                <label for="quantity">Quantity: (1 - 10) </label><input type="range" id="quantity" value="1" min="1" max="10">
+                                <small><p>Enter the number of copiers for the model# selected.</p></small>
+                            </li>
+                        </ul>
+                        <ul>               
+                            <li><label for="copierInformation">Copier Information</label>
+                                <ul>
+                                    <li>
+                                        <label for="asset"><span class="asterisk">*</span> Asset ID#:  </label><input type="text" id="assetID" placeholder="Copier's Unique ID#">
+                                        <small><p>Located on the sticker on the front of the copier.</p></small>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label for="leaseEnd"> Lease End Date:  </label><input type="date" id="leaseEndDate" placeholder="MM/DD/YY">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label for="notes">Notes:  </label><br>
+                                        <textarea id="notes" placeholder="Enter relevant information about this copier's placement, use or terms of service."></textarea>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </fieldset>
+                <label class="sumbit">
+                <input type="submit" value="Submit" id="submit" /><br/>
+                </label>
+            </form>
+            <script src="js/json.js" type="text/javascript"></script>            
+            <script src="js/main.js" type="text/javascript"></script>
+    </body>
+    <footer>
+        <div id="addItemFooter">
+             <small><p>Copyright &#169 2013  MiCOPY.  All rights reserved.  Terms of Use  |  Privacy Statment </p></small>
+        </div>
+    </footer>
+</html>

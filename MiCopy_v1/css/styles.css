@@ -1,0 +1,319 @@
+/* Michelle Goldman
+MIU 1302
+Project 1
+*/
+
+
+
+body{
+    background-color: white; 
+    font-size: 14px;
+    margin: 0;              
+}
+
+h1 {
+    
+    padding: 5px;
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border-top: 2px solid #21335D;
+    border-bottom: 2px solid #21335D;
+    border-radius: 4px 4px 4px 4px;
+    text-shadow: 3px -3px 2.5px #21335D;   
+    color: #9DAFD8;
+    font-family: Hobo std;
+    font-size: 36px;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: center;
+    box-shadow: -4px 4px 4px 5px #86c0ff;
+    
+}
+h2 { 
+    background: -webkit-linear-gradient(#eef2fa 0%, #eef2fa 30%);
+    padding: 15px;
+    margin-bottom:  30px;
+    margin-top: -20px;
+    color: #6379AD;
+    text-shadow: 0px -1px 0px #21335D;   
+    text-align: center;
+    border-bottom: 2px solid #F0F8FF;   
+    word-spacing: 1em;
+
+}
+
+h3 {
+    color: #999999;
+    font-size: 18px;
+    text-align: center;
+    word-spacing: .50em;
+}
+
+h4 {
+    color: #666666;
+    font:  bold;
+    font-family: sans-serif; 
+    font-size: large;
+    text-align: center;
+}
+
+p{
+    color: red;
+    text-align: left;
+}
+
+fieldset{   
+    padding: 4px 4px 4px 4px;
+    width: 440px;
+    height: 460px auto;
+    margin: 12px auto 12px auto; 
+    background: #eef2fa;
+    
+}
+
+#copierSection{
+    text-align: center; display: block;
+    width: 160px; height: 30px;
+}
+
+textarea {
+    resize: both;
+    width: 268px;
+    height: 60px;
+    border-radius: 4px 4px 4px 4px;
+    border-style: inset;
+    background-color: #F0F8FF ; 
+
+}
+
+li {
+    margin: 4px auto 4px auto;
+    padding: 5px;   
+    text-align: left;
+    font-size: 15px;
+    color: #3B4990;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+body #secondDiv #addItemNav li{
+    text-align: center; display: inline;
+    margin: 0px -35px 0px 43px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;   
+}
+
+
+body #bits ol li{
+    padding: 5px 5px 5px 5px;
+    margin: 40px 40px -15px 0px;
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border-top: 2px solid #21335D;
+    border-bottom: 2px solid #21335D;
+    border-radius: 4px 4px 4px 4px;
+    text-shadow: 1px -1px 1px #21335D;   
+    color: #091349;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2em;
+    letter-spacing: .10em;
+    text-align: left;
+    box-shadow: -4px 4px 4px 5px #86c0ff;
+}
+
+img{
+    display: inline;
+    padding-bottom: 5px;   
+}
+
+
+#addCopierLink{
+    padding: 15px;
+    text-align: center; display: block;
+}
+
+#indexFooter{
+    padding: 8px;
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border-top: 2px solid #21335D;
+    border-bottom: 2px solid #21335D;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: -4px 0px -3px 5px #86c0ff;
+    text-align: center; display: block;
+}
+
+#indexFooter p{
+    text-shadow: 3px -3px 2.5px #21335D;   
+    color: #eef2fa;
+    font: 6px;
+    font-family: sans-serif;   
+    letter-spacing: .10em;
+    text-align: center; display: block; 
+}
+
+#addItemFooter{
+    padding: 8px;
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border-top: 2px solid #21335D;
+    border-bottom: 2px solid #21335D;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: -4px 0px -3px 5px #86c0ff;
+    text-align: center; display: block;
+    line-height: 1.2em;
+    
+}
+
+#addItemFooter p{
+    text-shadow: 3px -3px 2.5px #21335D;   
+    color: #eef2fa;
+    font: 6px;
+    font-family: sans-serif;   
+    letter-spacing: .10em;
+    text-align: center; display: block;
+}
+
+
+form fieldset legend{
+    
+    padding: 0px 300px 6px 10px;
+    font-size: 22px;
+    text-shadow: 3px -3px 2.5px #21335D;   
+    color: #F1F4FB;
+    text-align: center; display: inline;
+    border-radius: 4px 4px 4px 4px;
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    box-shadow: 0px -4px -6px 12px #86c0ff;
+
+}
+
+
+input#submit {
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border: 1px solid #094dc2;
+    font-size: medium;
+    display: block;
+    text-shadow: 3px -3px 2.5px #21335D;   
+    color: #eef2fa;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 35px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px #666666;
+}
+
+input#button {
+    background: -webkit-linear-gradient(#86c0ff 0%, #6379AD 30%);
+    border: 1px solid #094dc2;
+    font-size: medium;
+    display: block;
+    text-shadow: 0px -1.6px 1px white;
+    color: #eef2fa;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 35px;
+    border-radius: 0px;
+}
+
+
+body form div #addItemFooter p{
+    display: none;
+}
+
+div#errors ul {
+    color: red;
+    font: xx-large;
+    font-family: Hobo std;
+    font size: 16px;
+    text-align: center
+}
+
+#bits ol li ul{   
+    display: block;    
+    
+}
+
+.asterisk {
+    color: red;
+    font: bold;
+}
+
+
+a:link{color:#6895dc; }
+a:visited{color: #A8A8A8;}
+a:hover{color: #86c0ff;}
+a:active{color: blue;}
+
+
+
+/* Radio button hover effects*/
+
+.model {	
+	background: -o-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%);
+	background: -ms-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%);
+	background: linear-gradient(top,  #cfe7fa 0%,#6393c1 100%);
+	border: 1px solid #6393c1;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	-moz-box-shadow: inset 1px 1px 0px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .5);
+	-webkit-box-shadow: inset 1px 1px 0px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .5);
+	box-shadow: inset 1px 1px 0px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .5);
+	cursor: pointer;
+	display: table-row;
+	font: 15px Arial, Verdana, Geneva, sans-serif;
+	line-height: 41px;
+}
+.model:hover .inner {
+	opacity: .5;
+}
+.model input {
+	display: none;
+}
+.model input:checked + .outer .inner {
+	opacity: 1;
+}
+.model .outer {
+	background: #2989d8;
+	background: -moz-radial-gradient(center, ellipse cover,  #2989d8 0%, #101354 99%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2989d8), color-stop(99%,#101354));
+	background: -webkit-radial-gradient(center, ellipse cover,  #2989d8 0%,#101354 99%);
+	background: -o-radial-gradient(center, ellipse cover,  #2989d8 0%,#101354 99%);
+	background: -ms-radial-gradient(center, ellipse cover,  #2989d8 0%,#101354 99%);
+	background: radial-gradient(center, ellipse cover,  #2989d8 0%,#101354 99%);
+	border: 1px solid black;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	display: block;
+	float: left;
+	height: 20px;
+	margin: 10px;
+	width: 20px;
+}
+.model .inner {
+	background: #e4f5fc;
+	background: -moz-radial-gradient(center, ellipse cover,  #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e4f5fc), color-stop(50%,#bfe8f9), color-stop(51%,#9fd8ef), color-stop(100%,#2ab0ed));
+	background: -webkit-radial-gradient(center, ellipse cover,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+	background: radial-gradient(center, ellipse cover,  #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	display: block;
+	height: 14px;
+	margin: 3px;
+	opacity: 0;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	transition: opacity .5s;
+	width: 14px;
+}
+
+
